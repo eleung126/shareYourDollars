@@ -53,22 +53,4 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    public void sendEmail(View view) {
-        Intent intent = new Intent(Intent.ACTION_SENDTO);
-        intent.setData(Uri.parse("mailto:"));
-
-        EditText editText = (EditText) findViewById(R.id.editable_text);
-        String emailToBeSent = editText.getText().toString();
-
-        intent.putExtra(Intent.EXTRA_EMAIL, new String[]{"sujeethjinesh@gmail.com", "hello@pearlhacks.com"});
-        intent.putExtra(Intent.EXTRA_EMAIL, emailToBeSent);
-
-        if(intent.resolveActivity(getPackageManager()) != null) {
-            startActivityForResult(intent, 0);
-        }
-    }
-
-    public void openFacebook(View view){
-
-    }
 }
