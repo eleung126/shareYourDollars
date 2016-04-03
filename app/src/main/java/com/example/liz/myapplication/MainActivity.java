@@ -10,6 +10,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
 import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
@@ -51,6 +52,11 @@ public class MainActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public void feedMe(View view){
+        Button feedButton = (Button) findViewById(R.id.feedPpl);
+
     }
 
 }
